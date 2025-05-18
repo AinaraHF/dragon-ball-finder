@@ -1,9 +1,28 @@
+import "../styles/App.scss";
+import { useEffect, useState } from "react";
+import getDataApi from "../services/api";
+import { Route, Routes } from "react-router-dom";
+import Header from "./Header";
 
 function App() {
   
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(()=> {
+    getDataApi().then((data)=> {setCharacters(data)})
+  }, [])
 
   return (
-    <h1>Template React</h1>
+    <Routes>
+      <Route path="/" element={
+        <>
+        <Header/>        
+        
+        </>}>
+      
+      </Route>
+
+    </Routes>
   )
 }
 

@@ -1,14 +1,36 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+  $main-color: #f8c471;
+  $main-color-light: #fad7a0;
+  $main-color-dark: #f5b041;
+
+  $secondary-color: #85c1e9 ;
+  $secondary-color-light: #aed6f1 ;
+  $secondary-color-dark: #5dade2 ;
+
+  $title-font: "Underdog", system-ui;
+  $text-font: Roboto Slab;
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+.hidden{
+  display:none;
 }
 
-.read-the-docs {
-  color: #888;
+header{
+  background-color: $main-color-dark;
+}
+
+h1{
+  font-family: $title-font;
+  font-size: 20px;
+  color: $secondary-color-dark;
+}
+
+body{
+  background-color: $main-color;
+
 }
