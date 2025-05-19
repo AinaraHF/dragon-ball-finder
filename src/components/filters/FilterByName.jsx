@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FilterByName({filterName, setFilterName}){
 
     const handleInput = (ev) => {
@@ -11,5 +13,10 @@ function FilterByName({filterName, setFilterName}){
         </div>
     )
 }
+
+FilterByName.propTypes = {
+  setFilterName: PropTypes.func,
+  filterName: PropTypes.string,
+};
 
 export default FilterByName;

@@ -7,7 +7,7 @@ function getDataApi(){
                 id: character.id,
                 name: character.name,
                 description: character.description,
-                ki: character.ki,
+                ki: parseInt(character.ki),
                 img: character.image
             };
         });

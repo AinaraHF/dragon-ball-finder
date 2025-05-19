@@ -10,20 +10,28 @@ function App() {
   
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
-  const [filterKi, setFilterKi] = useState("");
+  const [minKi, setMinKi] = useState("")
+  const [maxKi, setMaxKi] = useState("")
 
   useEffect(()=> {
     getDataApi().then((data)=> {setCharacters(data)})
   }, [])
 
-  const filterCharacters = characters.filter(character => character.name.toLowerCase().includes(filterName))
+  const filterCharacters = characters.filter(character => character.name.toLowerCase().includes(filterName.toLowerCase()))
+  .filter(character => {
+  const min = minKi === "" ? 0 : parseInt(minKi);
+    const max = maxKi === "" ? Infinity : parseInt(maxKi);
+
+    return character.ki >= min && character.ki <= max;
+  })
+  
 
   return (
     <Routes>
       <Route path="/" element={
         <>
         <Header/>        
-        <Filters filterName={filterName} setFilterName={setFilterName} filterKi={filterKi} setFilterKi={setFilterKi}/>
+        <Filters filterName={filterName} setFilterName={setFilterName} minKi={minKi} setMinKi={setMinKi} maxKi={maxKi} setMaxKi={setMaxKi}/>
         <CharacterList characters={filterCharacters}/>
         </>}>
       

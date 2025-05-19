@@ -1,0 +1,17 @@
+@import "./variables";
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: $secondary-color-dark;
+    font-family: $text-font;
+    font-weight: bolder;
+    gap: 10px;
+}
+
+input{
+    border-color: $secondary-color-dark;
+    background-color: $secondary-color-light;
+    font-weight: bolder;
+}

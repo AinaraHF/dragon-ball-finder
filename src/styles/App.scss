@@ -12,6 +12,10 @@
 
 header{
   background-color: $main-color-dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
 }
 
 h1{

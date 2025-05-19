@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Character from "./Character";
 
 function CharacterList({characters}){
@@ -9,5 +10,9 @@ function CharacterList({characters}){
         </ul>
     )
 }
+
+CharacterList.propTypes = {
+  data: PropTypes.array,
+};
 
 export default CharacterList;

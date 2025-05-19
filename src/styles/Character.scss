@@ -6,9 +6,37 @@
     justify-content: space-between;
     gap: 30px;
     border: 5px solid $main-color-dark;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
     color: $secondary-color-dark;
     background-color: $main-color-light;
     font-family: $text-font;
+}
+
+.details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon{
+    text-align: right;
+}
+
+.pic{
+    width: 100px;
+    height: 200px;
+    align-self: self-start;
+}
+
+.nameKi{
+    display: flex;
+    align-items: left;
+    gap: 20px;
+    font-family: $text-font;
+}
+
+.desc{
+    font-family: $text-font;
+    font-size: 14px;
 }
