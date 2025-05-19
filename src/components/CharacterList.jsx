@@ -12,7 +12,7 @@ function CharacterList({characters}){
 }
 
 CharacterList.propTypes = {
-  data: PropTypes.array,
+  characters: PropTypes.array,
 };
 
 export default CharacterList;

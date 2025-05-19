@@ -5,7 +5,7 @@ function Header(){
     return (
         <header>
             <h1>Buscador personajes Dragon Ball</h1>
-            <img src={Logo} alt="personajes Dragon Ball" width="100px" height="75px"/>
+            <img src={Logo} alt="bola Dragon Ball" width="100px" height="75px"/>
         </header>
     )
 }
